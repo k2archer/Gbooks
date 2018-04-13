@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">好借书</string>
+
+    <string name="menu_home_bt_title">首页</string>
+    <string name="menu_borrow_bt_title">借书</string>
+    <string name="menu_message_bt_title">消息</string>
+    <string name="menu_me_bt_title">我的</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
