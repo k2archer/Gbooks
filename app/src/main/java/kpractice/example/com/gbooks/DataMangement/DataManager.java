@@ -75,7 +75,7 @@ public class DataManager {
 
     private synchronized void bindRemoteService() {
         Intent i = new Intent();
-        i.setComponent(new ComponentName("pk.wei.com.library", "pk.wei.com.library.BookService"));
+        i.setComponent(new ComponentName("pk.wei.com.gserver", "pk.wei.com.gserver.BookService"));
         context.bindService(i, connection, Context.BIND_AUTO_CREATE);
     }
 
@@ -86,6 +86,8 @@ public class DataManager {
                 check = remoteBookManager.login(name);
                 if (check == 1)
                     userName = name;
+            } else {
+                check = -2;
             }
         } catch (RemoteException e) {
             e.printStackTrace();
