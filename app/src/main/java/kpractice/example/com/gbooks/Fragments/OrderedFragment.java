@@ -43,11 +43,9 @@ public class OrderedFragment extends Fragment {
         if (savedInstanceState != null) {
             orderedBookList = savedInstanceState.getParcelableArrayList("orderedBookList");
         } else {
-            if (orderedBookList.size() == 0) {
-                ArrayList<Book> orderedLisTmp = mDataManager.getOrderedList();
-                for (Book book : orderedLisTmp) {
-                    orderedBookList.add(new BookItem(book.name));
-                }
+            ArrayList<Book> orderedLisTmp = mDataManager.getOrderedList();
+            for (Book book : orderedLisTmp) {
+                orderedBookList.add(new BookItem(book.name));
             }
         }
 
@@ -56,6 +54,12 @@ public class OrderedFragment extends Fragment {
         initOrderedListView();
 
         return rootView;
+    }
+
+    @Override
+    public void onSaveInstanceState(Bundle outState) {
+        outState.putParcelableArrayList("orderedBookList", orderedBookList);
+        super.onSaveInstanceState(outState);
     }
 
     private void initOrderedListView() {
