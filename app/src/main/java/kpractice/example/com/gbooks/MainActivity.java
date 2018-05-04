@@ -19,40 +19,6 @@ import kpractice.example.com.gbooks.Fragments.BorrowFragment;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-//    public class Item implements Serializable {
-//        public RelativeLayout layout;
-//        public ImageView image;
-//        public TextView text;
-//        public Fragment fragment;
-//
-//        public Item(int layoutId, int imageViewId, int textViewId) {
-//            this.layout = (RelativeLayout) findViewById(layoutId);
-//            this.image = (ImageView) findViewById(imageViewId);
-//            this.text = (TextView) findViewById(textViewId);
-//        }
-//    }
-
-
-//    class Resource {
-//        public int layoutId;
-//        public int imageViewId;
-//        public int textViewId;
-//
-//        Resource(int layout, int image, int text) {
-//            layoutId = layout;
-//            imageViewId = image;
-//            textViewId = text;
-//        }
-//    }
-
-//    Resource[] itemId = {
-//            new Resource(R.id.layout_home, R.id.img_home, R.id.tv_home),
-//            new Resource(R.id.layout_borrow, R.id.img_borrow, R.id.tv_borrow),
-//            new Resource(R.id.layout_message, R.id.img_message, R.id.tv_message),
-//            new Resource(R.id.layout_usercenter, R.id.img_usercenter, R.id.tv_usercenter),
-//    };
-
-    //    private HashMap<Integer, Fragment> itemMap = new HashMap<>();
     private HashMap<Integer, Class<?>> itemMap = new HashMap<>();
     private int currentIndex = 0;
     Integer[] menuId = {
@@ -131,6 +97,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View view) {
         int index = view.getId();
         FragmentManager manager = getSupportFragmentManager();
+
+        for (int i = manager.getBackStackEntryCount(); i > 0; i--)
+            manager.popBackStack();
+
         Fragment fragment = manager.findFragmentByTag(String.valueOf(index));
         if (fragment != null) {
             if (currentIndex != index) {

@@ -84,5 +84,17 @@ public class UserCenterFragment extends Fragment {
             }
         });
 
+        final OrderedFragment orderedFragment = new OrderedFragment();
+        TextView orderTv = (TextView) rootView.findViewById(R.id.my_order_tv);
+        orderTv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
+                transaction.add(R.id.frame_content, orderedFragment, String.valueOf(R.layout.fragment_ordered));
+                transaction.show(orderedFragment);
+                transaction.addToBackStack(null);
+                transaction.commit();
+            }
+        });
     }
 }
