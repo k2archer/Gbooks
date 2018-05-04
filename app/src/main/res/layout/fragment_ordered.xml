@@ -13,11 +13,10 @@
             android:id="@+id/ordered_title_tv"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
             android:background="@color/base_white"
-            android:paddingLeft="16sp"
-            android:text="我的订阅"
-            android:textSize="32sp" />
+            android:gravity="center"
+            android:text="当前订阅"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
 
         <kpractice.example.com.gbooks.Tools.CommonListView
             android:id="@+id/ordered_list"
