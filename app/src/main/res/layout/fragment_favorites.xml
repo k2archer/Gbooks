@@ -13,11 +13,10 @@
             android:id="@+id/favorite_title_tv"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
             android:background="@color/base_white"
-            android:paddingLeft="16sp"
-            android:text="我的收藏"
-            android:textSize="32sp" />
+            android:gravity="center"
+            android:text="@string/menu_me_favorite"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
 
         <kpractice.example.com.gbooks.Tools.CommonListView
             android:id="@+id/favorite_list"

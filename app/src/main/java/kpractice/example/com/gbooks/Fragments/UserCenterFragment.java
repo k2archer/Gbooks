@@ -80,6 +80,7 @@ public class UserCenterFragment extends Fragment {
                 FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
                 transaction.add(R.id.frame_content, favoritesFragment, String.valueOf(R.layout.fragment_favorites));
                 transaction.show(favoritesFragment);
+                transaction.addToBackStack(null);
                 transaction.commit();
             }
         });

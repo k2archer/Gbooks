@@ -15,7 +15,7 @@
             android:layout_height="wrap_content"
             android:background="@color/base_white"
             android:gravity="center"
-            android:text="当前订阅"
+            android:text="@string/menu_me_ordered"
             android:textAppearance="?android:attr/textAppearanceMedium" />
 
         <kpractice.example.com.gbooks.Tools.CommonListView
