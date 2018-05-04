@@ -16,6 +16,7 @@ import android.widget.TextView;
 import kpractice.example.com.gbooks.AboutActivity;
 import kpractice.example.com.gbooks.DataMangement.DataManager;
 import kpractice.example.com.gbooks.R;
+import kpractice.example.com.gbooks.SettingsActivity;
 
 public class UserCenterFragment extends Fragment {
 
@@ -95,6 +96,15 @@ public class UserCenterFragment extends Fragment {
                 transaction.show(orderedFragment);
                 transaction.addToBackStack(null);
                 transaction.commit();
+            }
+        });
+
+        TextView settingsTv = (TextView) rootView.findViewById(R.id.settings_tv);
+        settingsTv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getContext(), SettingsActivity.class);
+                startActivity(i);
             }
         });
     }
