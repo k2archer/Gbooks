@@ -134,10 +134,10 @@ public class DataManager {
         return check;
     }
 
-    public int unsubscribeBook(String book) {
+    public int unSubscribeBook(String book) {
         int check = 0;
         try {
-            check = remoteBookManager.unsubscribeBook(userName, book);
+            check = remoteBookManager.unSubscribeBook(userName, book);
         } catch (RemoteException e) {
             e.printStackTrace();
         }

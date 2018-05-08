@@ -139,7 +139,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 String text = "";
-                int check = mDataManager.unsubscribeBook(book);
+                int check = mDataManager.unSubscribeBook(book);
                 if (check == 1) {
                     text = "你没有订阅了《" + book + "》.";
                     Toast.makeText(getContext(), text, Toast.LENGTH_SHORT).show();

@@ -12,7 +12,7 @@ interface IRemoteBookManager {
     List<Book> findBook(String name);
     List<Book> getRecommend();
     int subscribeBook(String user, String book);
-    int unsubscribeBook(String user, String book);
+    int unSubscribeBook(String user, String book);
     List<Book> getOrderedList(String user);
 //
     void registerNewBookPush(INewBookPushListener listener);
