@@ -38,17 +38,11 @@ public class MessageFragment extends Fragment {
             mMessageList = savedInstanceState.getParcelableArrayList("mMessageList");
         } else {
             mMessageList = new ArrayList<>();
-            mMessageList.add(new MessageItem("第一个消息。"));
-            mMessageList.add(new MessageItem("第二个消息。"));
-            mMessageList.add(new MessageItem("第三个消息。"));
-            mMessageList.add(new MessageItem("第四个消息。"));
-            mMessageList.add(new MessageItem("第五个消息。"));
 
-// TODO: 从服务端拉取消息列表
-//            ArrayList<MessageItem> list = mDataManager.getMessages();
-//            for (MessageItem item: list) {
-//                mMessageList.add(item);
-//            }
+            ArrayList<String> list = mDataManager.getMessagesList();
+            for (String item: list) {
+                mMessageList.add(new MessageItem(item));
+            }
         }
     }
 

@@ -157,6 +157,18 @@ public class DataManager {
         return orderedList;
     }
 
+    public ArrayList<String> getMessagesList() {
+        ArrayList<String> messagesList = new ArrayList<>();
+        try {
+            String user = getUserName();
+            messagesList = (ArrayList<String>) remoteBookManager.getMessagesList(user);
+        } catch (RemoteException e) {
+            e.printStackTrace();
+        }
+
+        return messagesList;
+    }
+
     public void registerNewBookPush() {
         try {
             remoteBookManager.registerNewBookPush(new INewBookPushListener.Stub() {

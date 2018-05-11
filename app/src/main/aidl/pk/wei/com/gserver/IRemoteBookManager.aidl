@@ -14,6 +14,7 @@ interface IRemoteBookManager {
     int subscribeBook(String user, String book);
     int unSubscribeBook(String user, String book);
     List<Book> getOrderedList(String user);
+    List<String> getMessagesList(String user);
 //
     void registerNewBookPush(INewBookPushListener listener);
     void unRegisterNewBookPush(INewBookPushListener listener);
