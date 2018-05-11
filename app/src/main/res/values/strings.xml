@@ -9,6 +9,10 @@
     <string name="menu_me_favorite">我的收藏</string>
     <string name="menu_me_ordered">我的订阅</string>
 
+    <string name="menu_item_setting">设置</string>
+    <string name="menu_item_about">关于</string>
+    <string name="menu_item_exit">退出</string>
+
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

@@ -73,16 +73,16 @@
                 android:layout_marginTop="1dp"
                 android:background="@color/base_white"
                 />
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="64dp"
-                android:text="已读清单"
-                android:textSize="28sp"
-                android:gravity="center_vertical"
-                android:paddingLeft="8dp"
-                android:layout_marginTop="1dp"
-                android:background="@color/base_white"
-                />
+            <!--<TextView-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="64dp"-->
+                <!--android:text="已读清单"-->
+                <!--android:textSize="28sp"-->
+                <!--android:gravity="center_vertical"-->
+                <!--android:paddingLeft="8dp"-->
+                <!--android:layout_marginTop="1dp"-->
+                <!--android:background="@color/base_white"-->
+                <!--/>-->
             <TextView
                 android:id="@+id/settings_tv"
                 android:layout_width="match_parent"
